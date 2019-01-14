@@ -1,0 +1,82 @@
+button {
+	height: 50px;
+	width: 100px;
+	padding: 10px;
+	margin: 5px;
+}
+
+body {
+	 background-image: linear-gradient(to right, #ffffff , #e6e6e6);
+    	background-repeat: no-repeat;
+    	background-size: cover;
+}
+#content {
+	margin-top: 20%;
+	color: Tomato;
+}
+
+#signup {
+	padding: 25px;
+	background-color: purple;
+	margin-left: 450px;
+	margin-right:450px;
+	margin-top: 15px;
+	text-align: left;
+}
+
+#login {
+	padding: 25px;
+	background-color: purple;
+	margin-left: 300px;
+	margin-right:300px;
+	margin-top: 15px;
+	text-align: left;
+}
+
+#footer {
+	margin-top: 15%;
+	display: block;
+	background-color: grey;
+	vertical-align: text-center;
+	font-size: 25px;
+	font-style: bold;
+}
+
+#footer img{
+	float: right;
+	height: 100px;
+	width: 150px;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 25px;
+}
+
+li a:hover:not(.active) {
+    color: #111;	
+    background-color: #eee;
+}
+
+.active {
+    background-color: #4CAF50;
+}

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+	<head> 
+		<meta http-equiv="content-type" content="text/html; charset=iso-8859-2">
+		<title>PerfOrg</title>
+		<link rel="stylesheet" type="text/css" href="Stil.css">
+	</head>
+	<body>
+		
+		<ul>
+  			<li><a class="active" href="#home">Home</a></li>
+  			<li><a href="testnav.php">News</a></li>
+ 			<li><a href="testnav.php">Contact</a></li>
+  			<li><a href="testnav.php">About</a></li>
+		</ul>
+		<div id="content" align="center">
+			<h1><strong>PerfOrg</strong></h1>
+			<h3>Welcome to the PerfOrg!<br/>Organise your performance all over the world!</h3>
+			<script>
+				function vis1() {
+					let x = document.getElementById("signup");
+					let y = document.getElementById("login");
+					
+					if (x.style.display == "none") {
+						y.style.display = "none";
+						x.style.display = "";
+					}
+				}
+				
+				function vis2() {
+					let x = document.getElementById("signup");
+					let y = document.getElementById("login");
+					
+					if (y.style.display == "none") {
+						x.style.display = "none";
+						y.style.display = "";
+					}
+				}
+			</script>
+			<button style="background-color: DodgerBlue;" onclick="vis1()">Sign up</button> <button style="background-color: MediumSeaGreen;" onclick="vis2()">Log In</button>
+			<form id="signup" style="display: none;" action="Obrazac1.php" method="GET">
+				<h3><input type="radio" name="odabir" value="bend"> Bend/Performer </h3><br>
+				<h3><input type="radio" name="odabir" value="user"> User </h3><br>
+				<input type="submit"> <br>
+			</form>
+			<form id="login" style="display: none;" action="usermenu.php" method="POST">
+				<h3>Username: <input type="text" name="usrname" ></h3><br>
+				<h3>Password: <input type="password" name="pasw" ></h3><br>
+				<input type="submit"> <br>
+			</form>
+		</div>
+		<div id="footer">
+			<span align="left"> &copy All rights reserved.  </span>
+			<span align="left"> Pictures taken from Pixabay. </span>
+		</div>
+</body>
