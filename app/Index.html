@@ -1,9 +1,46 @@
 <!DOCTYPE html>
 <html>
 	<head> 
-		<meta http-equiv="content-type" content="text/html; charset=iso-8859-2">
+		<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
 		<title>PerfOrg</title>
 		<link rel="stylesheet" type="text/css" href="style.css">
+
+		<script>
+			function vis1() {
+				let x = document.getElementById("signup");
+				let y = document.getElementById("login");
+				
+				if (x.style.display == "none") {
+					y.style.display = "none";
+					x.style.display = "";
+				}
+			}
+			
+			function vis2() {
+				let x = document.getElementById("signup");
+				let y = document.getElementById("login");
+				
+				if (y.style.display == "none") {
+					x.style.display = "none";
+					y.style.display = "";
+				}
+			}
+
+			function dod_podaci(){
+				let x = document.getElementById("podaci");
+
+				if (x.style.display == "none"){
+					x.style.display = "";
+				} else {
+					x.style.display = "none";
+				}
+				
+				// x.innerHTML = "Bok";
+				// document.write("alo");
+			}
+		</script>
+
+
 	</head>
 	<body>		
 		<ul class="navigation_bar">
@@ -16,40 +53,21 @@
 		<div id="content">
 			<h1 class="title1">PerfOrg</h1>
 			<h3 class="title2">Welcome to the PerfOrg!<br/>Organise your performance all over the world!</h3>
-			<script>
-				function vis1() {
-					let x = document.getElementById("signup");
-					let y = document.getElementById("login");
-					
-					if (x.style.display == "none") {
-						y.style.display = "none";
-						x.style.display = "";
-					}
-				}
-				
-				function vis2() {
-					let x = document.getElementById("signup");
-					let y = document.getElementById("login");
-					
-					if (y.style.display == "none") {
-						x.style.display = "none";
-						y.style.display = "";
-					}
-				}
-			</script>
+			
 			<button class="button" onclick="vis2()">Prijava</button>
 			<button class="button" onclick="vis1()">Registracija</button> 
-			<form id="signup" style="display: none;" action="Obrazac1.php" method="GET">
-				<p class="unos">Unesi korisničko ime: </p><input type="text" name="usrname">
-				<p class="unos">Unesi zaporku: </p><input type="password" name="pasw" >
+			<form id="signup" style="display: none;" action="registration_process.php" method="POST">
+				<p class="unos">Unesi korisničko ime: </p><input type="text" name="username" required>
+				<p class="unos">Unesi zaporku: </p><input type="password" name="pass" required>
 				<p class="unos">Želim se registrirati kao:</p>
 				<table class="radio">
 					<tr>
-					<td class="choice"><p> Izvođač <input type="radio" name="odabir" value="izvođač"></p></td>
-					<td class="choice"><p><input type="radio" name="odabir" value="Korisnik"> Korisnik </p></td>
+					<td class="choice"><p> Izvođač <input type="checkbox" onclick="dod_podaci()" name="odabir" value="izvodac"></p></td>
+					<!-- <td class="choice"><p><input type="radio" onclick="dod_podaci()" name="odabir" value="korisnik"> Korisnik </p></td> -->
 					</tr>
 				</table>
 				
+				<p class="unos" id="podaci" style="display: none;">Žanr benda: <input type="text" name="zanr"></p>
 				
 				<input type="submit" class="button1"> <br>
 			</form>

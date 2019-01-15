@@ -1,5 +1,12 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700&subset=latin-ext');
 
+body {
+	height: 100%;
+	margin: 0;
+	background-image: white;
+	font-family: 'Montserrat', sans-serif;
+}
+
 .button {
 	height: 48px;
 	width: 120px;
@@ -35,19 +42,12 @@
 	background-color: #86bebe;
 }
 
-body {
-	height: 100%;
-	margin: 0;
-	background-image: white;
-	font-family: 'Montserrat', sans-serif;
-	
-    
-}
+
 #content {
 	width:600px; 
 	margin-left: auto;
 	margin-right: auto;
-	margin-top: 200px;
+	margin-top: 160px;
 	color: #333;
 	text-align: center;
 }
