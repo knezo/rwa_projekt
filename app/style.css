@@ -1,37 +1,93 @@
-button {
-	height: 50px;
-	width: 100px;
-	padding: 10px;
-	margin: 5px;
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700&subset=latin-ext');
+
+.button {
+	height: 48px;
+	width: 120px;
+	padding: 8px;
+	margin: 8px;
+	border-radius: 12px;
+	/*border: 0;*/
+	font-size: 16px;
+    color: white;
+	background-color: #478585;
+	transition: 0.2s;
+}
+
+.button:hover{
+	background-color: #86bebe;
+}
+
+.button1 {
+	height: 36px;
+	width: 96px;
+	padding: 8px;
+	margin: 8px;
+	border-radius: 12px;
+	/*border: 0;*/
+	font-size: 14px;
+    color: white;
+	background-color: #478585;
+	border-color: black;
+	transition: 0.2s;
+}
+
+.button1:hover{
+	background-color: #86bebe;
 }
 
 body {
-	 background-image: linear-gradient(to right, #ffffff , #e6e6e6);
-    	background-repeat: no-repeat;
-    	background-size: cover;
+	height: 100%;
+	margin: 0;
+	background-image: white;
+	font-family: 'Montserrat', sans-serif;
+	
+    
 }
 #content {
-	margin-top: 20%;
-	color: Tomato;
+	width:600px; 
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 200px;
+	color: #333;
+	text-align: center;
 }
 
 #signup {
-	padding: 25px;
-	background-color: purple;
-	margin-left: 450px;
-	margin-right:450px;
-	margin-top: 15px;
-	text-align: left;
+	width: 400px;
+	padding: 24px;
+	background-color: #ffba3f;
+	margin-left: auto;
+	margin-right:auto;
+	margin-top: 16px;
+	text-align: center;
+	border-radius: 16px;
+	font-size: 17px;
+	font-weight: 500;
+}
+
+#signup .unos{
+	margin-bottom: 2px;
 }
 
 #login {
-	padding: 25px;
-	background-color: purple;
-	margin-left: 300px;
-	margin-right:300px;
-	margin-top: 15px;
-	text-align: left;
+	width: 400px;
+	padding: 24px;
+	background-color: #ffba3f;
+	margin-left: auto;
+	margin-right:auto;
+	margin-top: 16px;
+	text-align: center;
+	border-radius: 16px;
+	font-size: 20px;
+	font-weight: 500;
+
 }
+
+#login .unos{
+	margin-top: 8px;
+	margin-bottom: 24px;
+}
+
 
 #footer {
 	margin-top: 15%;
@@ -48,35 +104,64 @@ body {
 	width: 150px;
 }
 
-ul {
+.navigation_bar {
     list-style-type: none;
     margin: 0;
     padding: 0;
     overflow: hidden;
     background-color: #333;
     position: fixed;
+    left: 0; 
     top: 0;
     width: 100%;
 }
 
-li {
-    float: left;
+.nav_button {
+    float: left;    
 }
 
-li a {
+.nav_button a {
     display: block;
     color: white;
     text-align: center;
-    padding: 14px 16px;
+    padding: 16px 16px;
     text-decoration: none;
-    font-size: 25px;
+    font-size: 16px;
 }
 
-li a:hover:not(.active) {
+.nav_button a:hover {
     color: #111;	
     background-color: #eee;
 }
 
-.active {
-    background-color: #4CAF50;
+.nav_button_active {
+	float: left; 
+}
+
+.nav_button_active a {
+	display: block;
+    text-align: center;
+    padding: 16px 16px;
+    text-decoration: none;
+    font-size: 16px;
+    color: white;
+	background-color: #478585;
+}
+
+.title1 {
+	color: #333;
+	font-weight: 600;
+}
+
+.title2 {
+	color: #333;
+	font-weight: 300;
+}
+
+.radio {
+	position: float;
+}
+
+.choice{
+	margin: 24px;
 }

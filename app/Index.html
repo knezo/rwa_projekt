@@ -1,20 +1,21 @@
 <!DOCTYPE html>
+<html>
 	<head> 
 		<meta http-equiv="content-type" content="text/html; charset=iso-8859-2">
 		<title>PerfOrg</title>
-		<link rel="stylesheet" type="text/css" href="Stil.css">
+		<link rel="stylesheet" type="text/css" href="style.css">
 	</head>
-	<body>
-		
-		<ul>
-  			<li><a class="active" href="#home">Home</a></li>
-  			<li><a href="testnav.php">News</a></li>
- 			<li><a href="testnav.php">Contact</a></li>
-  			<li><a href="testnav.php">About</a></li>
+	<body>		
+		<ul class="navigation_bar">
+  			<li class="nav_button_active"><a href="#home">Home</a></li>
+  			<li class="nav_button"><a href="testnav.php">News</a></li>
+ 			<li class="nav_button"><a href="testnav.php">Contact</a></li>
+  			<li class="nav_button"><a href="testnav.php">About</a></li>
 		</ul>
-		<div id="content" align="center">
-			<h1><strong>PerfOrg</strong></h1>
-			<h3>Welcome to the PerfOrg!<br/>Organise your performance all over the world!</h3>
+		<hr>
+		<div id="content">
+			<h1 class="title1">PerfOrg</h1>
+			<h3 class="title2">Welcome to the PerfOrg!<br/>Organise your performance all over the world!</h3>
 			<script>
 				function vis1() {
 					let x = document.getElementById("signup");
@@ -36,20 +37,28 @@
 					}
 				}
 			</script>
-			<button style="background-color: DodgerBlue;" onclick="vis1()">Sign up</button> <button style="background-color: MediumSeaGreen;" onclick="vis2()">Log In</button>
+			<button class="button" onclick="vis2()">Prijava</button>
+			<button class="button" onclick="vis1()">Registracija</button> 
 			<form id="signup" style="display: none;" action="Obrazac1.php" method="GET">
-				<h3><input type="radio" name="odabir" value="bend"> Bend/Performer </h3><br>
-				<h3><input type="radio" name="odabir" value="user"> User </h3><br>
-				<input type="submit"> <br>
+				<p class="unos">Unesi korisničko ime: </p><input type="text" name="usrname">
+				<p class="unos">Unesi zaporku: </p><input type="password" name="pasw" >
+				<p class="unos">Želim se registrirati kao:</p>
+				<table class="radio">
+					<tr>
+					<td class="choice"><p> Izvođač <input type="radio" name="odabir" value="izvođač"></p></td>
+					<td class="choice"><p><input type="radio" name="odabir" value="Korisnik"> Korisnik </p></td>
+					</tr>
+				</table>
+				
+				
+				<input type="submit" class="button1"> <br>
 			</form>
 			<form id="login" style="display: none;" action="usermenu.php" method="POST">
-				<h3>Username: <input type="text" name="usrname" ></h3><br>
-				<h3>Password: <input type="password" name="pasw" ></h3><br>
-				<input type="submit"> <br>
+				<p class="unos">Korisničko ime: <input type="text" name="usrname"></p>
+				<p class="unos">Zaporka: <input type="password" name="pasw" ></p>
+				<input type="submit" class="button1" value="Prijavi se!"> <br>
 			</form>
 		</div>
-		<div id="footer">
-			<span align="left"> &copy All rights reserved.  </span>
-			<span align="left"> Pictures taken from Pixabay. </span>
-		</div>
 </body>
+
+</html>
